@@ -18,10 +18,10 @@ function onClickStartChangeColor(event) {
   if (isActive) {
     return;
   }
-    
+
   isActive = true;
-    refs.body.style.backgroundColor = getRandomHexColor();
-    
+  refs.body.style.backgroundColor = getRandomHexColor();
+
   idInterval = setInterval(() => {
     refs.body.style.backgroundColor = getRandomHexColor();
     console.log('change color');
@@ -30,5 +30,5 @@ function onClickStartChangeColor(event) {
 
 function onClickStopChangeColor(event) {
   clearInterval(idInterval);
-  isActive = false;
+    isActive = false;
 }
