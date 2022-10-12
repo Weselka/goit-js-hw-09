@@ -1,6 +1,15 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
+// If using flatpickr in a framework, its recommended to pass the element directly
+flatpickr(element, {});
+
+// Otherwise, selectors are also supported
+flatpickr("#myID", {});
+
+// creates multiple instances
+flatpickr(".anotherSelector");
+
 const refs = {
   datetime: document.querySelector('#datetime-picker'),
   btnStart: document.querySelector('[data-start]'),
@@ -51,5 +60,5 @@ console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
 console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
 
 function addLeadingZero(value) {
-    
+
 };
