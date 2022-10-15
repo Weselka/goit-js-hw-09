@@ -46,10 +46,11 @@ class TimerCountDown {
       const currentTime = Date.now();
       const deltaTime = startTime - currentTime;
       const time = this.convertMs(deltaTime);
-
       this.onCount(time);
 
       if (deltaTime > 1000) {
+        refs.btnStart.disabled = true;
+      } else {
         clearInterval(this.intervalId);
       }
     }, 1000);
