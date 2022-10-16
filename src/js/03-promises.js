@@ -24,7 +24,7 @@ function onSubmitCreatePromises(event) {
   }
 
   for (let position = 1; position <= amountEl; position += 1) {
-    createPromise(position, delay)
+    createPromise(position, delayEl)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
